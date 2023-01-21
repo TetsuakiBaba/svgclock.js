@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container-sm">
+        <h1 class="display-1">svgclock.js</h1>
+        <p class="lead">
+            svgclock.js is an clock icon generator with time set function. So you can generate clock svg icon with your
+            favorite time like below!! enjoy!!
+        </p>
+        <span class="fs-1 lh-1" id="svg"></span></p>
+        <h1 class="mt-4">Getting Started</h1>
+        Just call createSVGClock function with dom parameter that you want to add SVG Clock icon.
+        <code>
+            function createSVGClock(dom,
+            option = {hour:10, minute:10, color:'#777777, size:fontsize'});
+        </code>
+
+        <h1 class="mt-4">Sample</h1>
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <code>
+                    createSVGClock('#svg');
+                </code>
+            </div>
+            <div class="col-md-4 text-center" id="svg1">
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <code>
+                    createSVGClock('#svg',
+                    {hour:17, min:0});
+                </code>
+            </div>
+            <div class="col-md-4 text-center" id="svg2">
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <code>
+                    createSVGClock('#svg', 
+                    {color: '#4488AA' });
+                </code>
+            </div>
+            <div class="col-md-4 text-center" id="svg3">
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <code>
+                    createSVGClock('#svg', 
+                    {size: 50 });
+                </code>
+            </div>
+            <div class="col-md-4 text-center" id="svg4">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/3.1.2/svg.min.js"
+        integrity="sha512-I+rKw3hArzZIHzrkdELbKqrXfkSvw/h0lW/GgB8FThaBVz2e5ZUlSW8kY8v3q6wq37eybIwyufkEZxe4qSlGcg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./svgclock.js"></script>
+
+
+    <script>
+        for (let h = 0; h < 12; h++) {
+            for (let m = 0; m < 60; m += 10) {
+                createSVGClock('#svg', { hour: h, minute: m });
+            }
+        }
+        createSVGClock('#svg1');
+        createSVGClock('#svg2', { hour: 17, minute: 0 });
+        createSVGClock('#svg3', { color: '#4488AA' });
+        createSVGClock('#svg4', { size: 50 });
+    </script>
+</body>
+
+</html>
