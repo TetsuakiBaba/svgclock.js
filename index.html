@@ -4,10 +4,17 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>svgclock.js</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-
+    <style>
+        pre {
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            white-space: pre-wrap;
+        }
+    </style>
 </head>
 
 <body>
@@ -18,58 +25,112 @@
             favorite time like below!! enjoy!!
         </p>
         <span class="fs-1 lh-1" id="svg"></span></p>
-        <h1 class="mt-4">Getting Started</h1>
-        Just call createSVGClock function with dom parameter that you want to add SVG Clock icon.
+        <h1 class="mt-4">Quick start</h1>
+        <p>
+            Just call createSVGClock function with dom parameter that you want to add SVG Clock icon.
+        </p>
+        <a href="./sample.html" target="_blank">sample.html</a>
+        <pre>
         <code>
-            function createSVGClock(dom,
-            option = {hour:10, minute:10, color:'#777777, size:fontsize'});
-        </code>
+&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
 
-        <h1 class="mt-4">Sample</h1>
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+    &lt;title&gt;svgclock.js simple sample&lt;/title&gt;<br>
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div id=&quot;svg&quot;&gt;&lt;/div&gt;
+
+    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/svg.js/3.1.2/svg.min.js&quot;
+        integrity=&quot;sha512-I+rKw3hArzZIHzrkdELbKqrXfkSvw/h0lW/GgB8FThaBVz2e5ZUlSW8kY8v3q6wq37eybIwyufkEZxe4qSlGcg==&quot;
+        crossorigin=&quot;anonymous&quot; referrerpolicy=&quot;no-referrer&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/gh/TetsuakiBaba/svgclock.js@main/svgclock.js&quot; crossorigin=&quot;anonymous&quot;
+        type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+
+    &lt;script&gt;
+    // function createSVGClock(dom, option = {hour:10, minute:10, color:'#777777, size:fontsize'});
+        createSVGClock(&#039;#svg&#039;, { hour: 12, minute: 50, color: &#039;#4488AA&#039;, size: 200 });
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+        </code>
+    </pre>
+        <h1 class="mt-4">Samples of option parameters</h1>
         <div class="row align-items-center">
-            <div class="col-md-8">
+            <div class="col-8">
                 <code>
                     createSVGClock('#svg');
                 </code>
             </div>
-            <div class="col-md-4 text-center" id="svg1">
+            <div class="col-4 text-center" id="svg1">
             </div>
         </div>
         <div class="row align-items-center">
-            <div class="col-md-8">
+            <div class="col-8">
                 <code>
                     createSVGClock('#svg',
                     {hour:17, min:0});
                 </code>
             </div>
-            <div class="col-md-4 text-center" id="svg2">
+            <div class="col-4 text-center" id="svg2">
             </div>
         </div>
         <div class="row align-items-center">
-            <div class="col-md-8">
+            <div class="col-8">
                 <code>
                     createSVGClock('#svg', 
                     {color: '#4488AA' });
                 </code>
             </div>
-            <div class="col-md-4 text-center" id="svg3">
+            <div class="col-4 text-center" id="svg3">
             </div>
         </div>
         <div class="row align-items-center">
-            <div class="col-md-8">
+            <div class="col-8">
                 <code>
                     createSVGClock('#svg', 
                     {size: 50 });
                 </code>
             </div>
-            <div class="col-md-4 text-center" id="svg4">
+            <div class="col-4 text-center" id="svg4">
             </div>
         </div>
+
+        <h1>Dependency</h1>
+        <p>
+            svgclock.js needs SVG.js: <a href="https://github.com/svgdotjs/svg.js"
+                target="_blank">https://github.com/svgdotjs/svg.js</a>
+        </p>
+
+        <h1>
+            License
+        </h1>
+        MIT License
     </div>
 
+
+
+    <hr>
+    <footer class="small text-muted text-center mb-4">
+        2023 &copy; Tetsuaki baba <a href="https://github.com/TetsuakiBaba/svgclock.js" target="_blank"><i
+                class="bi bi-github"></i></a>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
+
+    <!-- highlightjs 本体 -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.2/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.2/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad(); //highlight.js初期起動
+    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/3.1.2/svg.min.js"
         integrity="sha512-I+rKw3hArzZIHzrkdELbKqrXfkSvw/h0lW/GgB8FThaBVz2e5ZUlSW8kY8v3q6wq37eybIwyufkEZxe4qSlGcg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -77,9 +138,10 @@
 
 
     <script>
+        let colors = ['#026E81', '#00ABBD', '#0099DD', '#FF9933', '#A1C7E0']
         for (let h = 0; h < 12; h++) {
             for (let m = 0; m < 60; m += 10) {
-                createSVGClock('#svg', { hour: h, minute: m });
+                createSVGClock('#svg', { hour: h, minute: m, color: colors[parseInt(Math.random() * 5)] });
             }
         }
         createSVGClock('#svg1');
