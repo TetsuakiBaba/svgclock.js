@@ -51,7 +51,7 @@
         type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
 
     &lt;script&gt;
-    // function createSVGClock(dom, option = {hour:10, minute:10, color:'#777777, size:fontsize'});
+    // function createSVGClock(dom, option = {hour:10, minute:10, color:'#777777, size:base-font-size[px]'}(default));
         createSVGClock(&#039;#svg&#039;, { hour: 12, minute: 50, color: &#039;#4488AA&#039;, size: 200 });
     &lt;/script&gt;
 &lt;/body&gt;
@@ -73,7 +73,7 @@
             <div class="col-8">
                 <code>
                     createSVGClock('#svg',
-                    {hour:17, min:0});
+                    {hour:17, minute:0});
                 </code>
             </div>
             <div class="col-4 text-center" id="svg2">
